@@ -44,6 +44,6 @@ case $1 in
 		status
 		;;
 	*)
-		echo "Usage $0: {start|stop|status|restart|force-reload}
+		echo "Usage $0: {start|stop|status|restart|force-reload}"
 esac
 exit 0
