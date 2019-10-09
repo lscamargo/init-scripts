@@ -1,0 +1,58 @@
+#!/bin/bash
+### BEGIN INIT INFO
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description:  "Do a or b"
+# Description: "Do a or b detailed"
+### END INIT INFO
+# chkconfig 2345 20 20
+
+CONFIG_FILE=/etc/filename.conf
+echo "Reading config file $CONFIG_FILE..."
+
+start () {		
+	cfg=`head -n 1 $CONFIG_FILE`
+	case $pos in
+		a)
+      #do a
+      ;;
+    b)
+      #do b
+      ;;
+    *)
+      echo "Wrong configuration file."			
+	esac
+}
+
+stop () {
+}
+
+restart () {
+}
+
+force-reload () {
+}
+
+status () {
+}
+
+case $1 in
+	start)
+		start
+		;;
+	stop)
+		stop
+		;;
+	restart)
+		restart
+		;;
+	force-reload)
+		force-reload
+		;;
+	status)
+		status
+		;;
+	*)
+		echo "Usage $0: {start|stop|status|restart|force-reload}
+esac
+exit 0
