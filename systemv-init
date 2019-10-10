@@ -25,15 +25,19 @@ start () {
 }
 
 stop () {
+	echo	"start"
 }
 
 restart () {
+	echo	"restart"
 }
 
 force-reload () {
+	echo	"force-reload"
 }
 
 status () {
+	echo	"status"
 }
 
 case $1 in
